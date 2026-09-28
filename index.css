@@ -1,0 +1,265 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  /* margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px; */               /* instead of this for margin   ->  margin:30px 80px; */
+  color: hsl(0, 0%, 93%);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px ;
+    background-color:  hsl(226, 25%, 17%);
+    border-radius: 10px;
+    border:  1px solid hsl(225, 23%, 24%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color:  hsl(226, 25%, 17%);
+    border-radius: 10px;
+    padding: 16px;
+    border:  1px solid hsl(225, 23%, 24%);
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.top p {
+    font-size: 16px;
+    color: hsl(0, 0%, 78%);
+    font-weight: 400;
+    margin: 0;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.remove-btn {
+    border: 1px solid hsl(225, 23%, 24%);
+    border-radius: 20px;
+    padding: 8px 16px;
+    background-color:  hsl(226, 25%, 17%);
+    color: hsl(200, 60%, 99%);
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+    background-color: hsl(225, 23%, 24%);
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle input:checked + .slider {
+  background-color: hsl(3, 86%, 64%);
+}
+
+.toggle input:checked + .slider::before {
+  transform: translateX(18px);
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(226, 11%, 37%);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.slider,
+.slider::before {
+  transition: 0.2s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    top: 3px;
+    background-color: hsl(0, 0%, 93%);
+    border-radius: 50%;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    gap:10px;
+}
+
+.filters button {
+    border-radius: 15px;
+    border: 1px solid hsl(0, 0%, 78%);
+    padding: 8px 16px;
+    background-color: hsl(226, 11%, 37%);
+}
+
+.filters button:hover {
+    cursor: pointer;
+    background-color: hsl(225, 23%, 24%);
+}
+
+/* Active button css */
+.filters button.active-filter {
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+    border-color: hsl(3, 86%, 64%);
+}
+
+.filters button:focus-visible {
+    outline: 2px solid hsl(3, 86%, 64%);
+    outline-offset: 2px;
+}
+
+body.light-theme {
+    background:white;
+}
+
+body.light-theme header {
+    background:white;
+}
+
+body.light-theme .card {
+    background: white;
+}
+
+body.light-theme .card p {
+    color: #333;
+}
+
+body.light-theme .card h2 {
+    color: #222;
+}
+
+body.light-theme .section-header h1 {
+    color: #222;
+}
+
+body.light-theme .remove-btn {
+    background: white;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+body.light-theme .remove-btn:hover {
+    cursor: pointer;
+    background-color:hsl(0, 0%, 93%); ;
+}
+
+
+body.light-theme .filters button {
+    background: white;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+body.light-theme .filters button:hover {
+    background-color: hsl(0, 0%, 93%);
+}
+
+/* Selected filter button in light theme */
+body.light-theme .filters button.active-filter {
+    background: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+    border-color: hsl(3, 86%, 64%);
+}
+
+.theme-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: hsl(225, 23%, 24%);
+    cursor: pointer;
+}
+
+.theme-btn:hover {
+    background-color: hsl(226, 11%, 37%);
+}
+
+.theme-btn img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+body.light-theme .theme-btn {
+    background-color: hsla(0, 0%, 93%, 0.872);
+}
+
+body.light-theme .theme-btn:hover {
+    background-color: hsl(0, 0%, 78%);
+}
+
+/* Responsive layout  */
+
+@media (max-width: 768px) {
+
+    body {
+       padding: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+}
