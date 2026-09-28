@@ -64,8 +64,8 @@ browser-extensions-manager/
 │   └── Frontend Mentor reference designs
 │
 ├── data.json
+├── index.css
 ├── index.html
-├── style.css
 ├── script.js
 ├── preview.jpg
 ├── style-guide.md
