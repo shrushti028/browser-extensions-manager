@@ -55,6 +55,7 @@ While building this project, I strengthened my understanding of:
 
 ## 📂 Project Structure
 
+```text
 browser-extensions-manager/
 │
 ├── assets/
@@ -70,3 +71,4 @@ browser-extensions-manager/
 ├── preview.jpg
 ├── style-guide.md
 └── README.md
+```
